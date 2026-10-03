@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Newsreader', Georgia, serif;
+  --color-surface-base: #0f1117;
+  --color-surface-card: #161922;
+  --color-surface-elevated: #1f2430;
+  --color-surface-hover: #262b3a;
+  --color-border-subtle: #1f2430;
+  --color-border-accent: #2d3342;
+}
+
+@layer base {
+  body {
+    background-color: #0f1117;
+    color: #e2e8f0;
+    font-family: var(--font-sans);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #232836;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333a4e;
+}
+
+/* Editorial Glass & Glow Utilities */
+.editorial-card {
+  background-color: #161922;
+  border: 1px solid #1f2430;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.35);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-card:hover {
+  border-color: #2d3342;
+}
+
+.editorial-card-interactive:hover {
+  border-color: #4F46E5;
+  box-shadow: 0 8px 30px -4px rgba(79, 70, 229, 0.15);
+}
+
+.editorial-serif {
+  font-family: 'Newsreader', Georgia, serif;
+}
+
+.glow-indigo {
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, rgba(15, 17, 23, 0) 70%);
+}
+
+.glow-cyan {
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, rgba(15, 17, 23, 0) 70%);
+}
